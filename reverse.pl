@@ -1,0 +1,9 @@
+palindrome(X):-
+	reverse(X,X).
+reverse(X,X).
+reverse([X|Y],Z):-
+	reverse(Y,W),
+	append(W,[X],Z).
+append([],X,X).
+append([L|X],Y,[L|Z]):-
+	append(X,Y,Z).
